@@ -1,21 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Link } from "react-router-dom";
-import NavBar from "../components/NavBar/NavBar";
 import Home from "../pages/Home";
+import NavBar from "../components/NavBar/NavBar";
+import Category from "../pages/Category";
+import ItemDetails from "../pages/ItemDetails";
 
 const MainRouter = () => {
 	return (
 		<Router>
-			<NavBar>
-				<Link to="/">Home</Link>
-				<Link to="/category/1">Ofertas</Link>
-				<Link to="/category/2">Hombre</Link>
-				<Link to="/category/3">Mujer</Link>
-			</NavBar>
+			<NavBar />
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="/category/:categoryId" element={<Home />} />
-				<Route path="/item/:itemId" element={<Home />} />
+				<Route path="/category/:categoryId" element={<Category />} />
+				<Route path="/item/:itemId" element={<ItemDetails />} />
 			</Routes>
 		</Router>
 	);
