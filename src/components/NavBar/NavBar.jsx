@@ -10,7 +10,7 @@ const NavBar = () => {
 		<Navbar expand="lg" bg="dark" variant="dark">
 			<Container>
 				<Navbar.Brand>
-					<Link to="/">Tienda QUINTANA</Link>
+					<Link to="/">Tienda Quintana</Link>
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
