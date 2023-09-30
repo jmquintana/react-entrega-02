@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
+import { getProducts } from "../services/service.js";
 
 import ItemListContainer from "../components/ItemListContainer/ItemListContainer";
 import LoaderComponent from "../components/LoaderComponent/LoaderComponent";
 
-function getProducts() {
-	return axios.get("https://dummyjson.com/products?limit=10");
-}
+// function getProducts() {
+// 	return axios.get("https://dummyjson.com/products?limit=10");
+// }
 
 const Category = () => {
 	const [products, setProducts] = useState([]);
